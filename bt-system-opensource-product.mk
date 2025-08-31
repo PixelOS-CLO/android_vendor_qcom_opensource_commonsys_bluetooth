@@ -43,15 +43,15 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     bluetooth.ble.iso_min_connection_interval=24 \
     bluetooth.ble.iso_max_connection_interval=40
 
-ifneq ($(TARGET_HAS_LOW_RAM), true)
-ifeq ($(BOARD_HAS_BT_XPAN), true)
-PRODUCT_PACKAGES += Xpan
-PRODUCT_PACKAGES += privapp-permission-xpan.xml
-endif #XPAN
-PRODUCT_PACKAGES += ChannelSoundingTestApp
-PRODUCT_PACKAGES += com.android.bluetooth.channelsoundingtestapp.xml
-PRODUCT_PACKAGES += BtVS
-endif #TARGET_HAS_LOW_RAM
+#ifneq ($(TARGET_HAS_LOW_RAM), true)
+#ifeq ($(BOARD_HAS_BT_XPAN), true)
+#PRODUCT_PACKAGES += Xpan
+#PRODUCT_PACKAGES += privapp-permission-xpan.xml
+#endif #XPAN
+#PRODUCT_PACKAGES += ChannelSoundingTestApp
+#PRODUCT_PACKAGES += com.android.bluetooth.channelsoundingtestapp.xml
+#PRODUCT_PACKAGES += BtVS
+#endif #TARGET_HAS_LOW_RAM
 
 endif #TARGET_BOARD_TYPE
 endif #BOARD_HAVE_BLUETOOTH_QCOM
@@ -60,9 +60,9 @@ endif #BOARD_HAVE_BLUETOOTH_QCOM
 ifeq ($(BOARD_HAVE_QCOM_FM), true)
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS), true)
 PRODUCT_PACKAGES += libqcomfm_jni
-PRODUCT_PACKAGES += libfmjni
-PRODUCT_PACKAGES += fm_helium
-PRODUCT_PACKAGES += libfm-hci
+#PRODUCT_PACKAGES += libfmjni
+#PRODUCT_PACKAGES += fm_helium
+#PRODUCT_PACKAGES += libfm-hci
 PRODUCT_PACKAGES += FM2
 PRODUCT_PACKAGES += qcom.fmradio
 PRODUCT_BOOT_JARS += qcom.fmradio
